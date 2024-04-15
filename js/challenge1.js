@@ -1,8 +1,10 @@
+// #1
 window.addEventListener("load",function() {
   console.log(document.querySelector("h1"))
   document.querySelector("h1").classList.add("heading")
 });
 
+// #2
 document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('dblclick', function() {
     const date = new Date();
@@ -15,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const checkbox = document.querySelector('#toggle');
-  const emailBox = document.querySelector('#email_input');
+// #3
+const checkbox = document.getElementById('toggle');
+const emailBox = document.getElementById('emailBox');
 
-  checkbox.addEventListener('change', function() {
-    if (checkbox.checked) {
-      emailBox.disabled = false;
-    } else {
-      emailBox.disabled = true;
-    }
-  });
+checkbox.addEventListener('click', function() {
+  if (checkbox.checked) {
+    emailBox.classList.remove('hidden');
+  }
+  else {
+    emailBox.classList.add('hidden');
+  }
 });
